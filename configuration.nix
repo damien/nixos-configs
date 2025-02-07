@@ -35,5 +35,8 @@
     wget
   ];
 
-  services.vscode-server.enable = true;
+  services = {
+    userborn.enable = true;
+    vscode-server.enable = true;
+  };
 }
