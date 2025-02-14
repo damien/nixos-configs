@@ -33,12 +33,16 @@
         modules = [
           nixos-wsl.nixosModules.default
           {
-            users.users = import ./users.nix;
+            system.stateVersion = "24.05";
+            wsl.enable = true;
           }
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+          }
+          {
+            users.users = import ./users.nix;
             home-manager.users.damien = import ./home.nix;
           }
         ];
