@@ -7,6 +7,6 @@ in {
     isNormalUser = true;
     extraGroups = ifTheyExist [
       "wheel"
-    ]
+    ];
   }
 }
