@@ -31,7 +31,10 @@
       hostname = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          nixos-wsl.nixosModules.default
+          {
+            users.users = import ./users.nix;
+          }
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

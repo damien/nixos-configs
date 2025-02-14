@@ -21,6 +21,8 @@
       userName = "Damien Wilson";
       userEmail = "damien@absurd.engineering";
     };
+
+    home-manager.enable = true;
   };
 
   home.packages = with pkgs; [
